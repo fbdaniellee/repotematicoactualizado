@@ -169,7 +169,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
 
     #if username not in config.ACCES_USERS:
     if username not in tl_admin_users:
-        await bot.send_message(ev.chat.id,'🛑No Tiene Acceso, contactar a @RichZC🛑')
+        await bot.send_message(ev.chat.id,'🛑No Tiene Acceso🛑')
         return
 
     if not os.path.isdir(config.ROOT_PATH + username):
@@ -342,7 +342,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
             await bot.send_file(ev.chat,txtsendname,
                                 caption=f'{txtsendname}',
                                 thumb='thumb.png',
-                                buttons=[Button.url('Soporte','https://t.me/RichZC')])
+                                buttons=[Button.url('🟢BOT_Decrypt-TXT🟢','https://t.me/Xdlinkdecrypt_bot')])
             for fitem in listdir:
                 try:
                     os.unlink(fitem)
